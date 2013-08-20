@@ -12,7 +12,7 @@ module.exports = function (filepath, copyLine, callback) {
             ++currentLine;
             if (currentLine === copyLine) {
                 copied = true;
-                cp.exec(util.format("echo \"%s\" | pbcopy", line), function () {
+                cp.exec(util.format("echo \"%s\" | tr -d \"\n\" | pbcopy", line), function () {
                     callback(null, line);
                 });
             }
