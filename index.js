@@ -1,6 +1,5 @@
 var fs = require("fs");
-var cp = require("child_process");
-var util = require("util");
+var clipboard = require("copy-paste").noConflict();
 
 module.exports = function (filepath, copyLine, callback) {
     var currentLine = 0;
@@ -12,7 +11,7 @@ module.exports = function (filepath, copyLine, callback) {
             ++currentLine;
             if (currentLine === copyLine) {
                 copied = true;
-                cp.exec(util.format("echo \"%s\" | tr -d \"\n\" | pbcopy", line), function () {
+                clipboard.copy(line, function () {
                     callback(null, line);
                 });
             }

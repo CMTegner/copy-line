@@ -4,7 +4,7 @@
   "description": "Copy a line from a file to your clipboard",
   "main": "index.js",
   "bin": {
-      "copy-line": "./bin/cli.js"
+    "copy-line": "./bin/cli.js"
   },
   "scripts": {
     "test": "echo \"TODO\""
@@ -21,12 +21,13 @@
     "pbcopy",
     "xclip"
   ],
-  "author": "Christian Maughan Tegner",
+  "author": "Christian Maughan Tegnér",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/CMTegner/copy-line/issues"
   },
   "dependencies": {
-    "split": "~0.2.10"
+    "split": "~0.2.10",
+    "copy-paste": "~0.0.8"
   }
 }
