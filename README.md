@@ -9,3 +9,4 @@ TODO
 * Code style + tests
 * Write readme
 * Publish to NPM
+* Support from:to
